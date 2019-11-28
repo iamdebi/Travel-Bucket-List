@@ -1,4 +1,7 @@
 require_relative('../models/continent')
+require_relative('../models/country')
+# require_relative('../models/city')
+# require_relative('../models/attraction')
 require('pry')
 
 Continent.delete_all()
@@ -37,6 +40,13 @@ continent7 = Continent.new({
   'name' => 'Antarctica'
   })
 continent7.save()
+
+country1 = Country.new({
+  'name' => "Germany",
+  'continent_id' => continent1.id
+  })
+country1.save()
+
 
 binding.pry
 nil
