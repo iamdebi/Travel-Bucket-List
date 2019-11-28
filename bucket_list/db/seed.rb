@@ -47,6 +47,42 @@ country1 = Country.new({
   })
 country1.save()
 
+country2 = Country.new({
+  'name' => "USA",
+  'continent_id' => continent4.id
+  })
+  country2.save()
+
+country3 = Country.new({
+  'name' => "South Africa",
+  'continent_id' => continent2.id
+  })
+  country3.save()
+
+country4 = Country.new({
+  'name' => "Australia",
+  'continent_id' => continent6.id
+  })
+  country4.save()
+
+country5 = Country.new({
+  'name' => "Japan",
+  'continent_id' => continent3.id
+  })
+  country5.save()
+
+country6 = Country.new({
+  'name' => "Brazil",
+  'continent_id' => continent5.id
+  })
+  country6.save()
+
+country7 = Country.new({
+  'name' => "France",
+  'continent_id' => continent1.id
+  })
+  country7.save()
+
 
 binding.pry
 nil
