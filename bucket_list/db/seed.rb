@@ -1,6 +1,6 @@
 require_relative('../models/continent')
 require_relative('../models/country')
-# require_relative('../models/city')
+require_relative('../models/city')
 # require_relative('../models/attraction')
 require('pry')
 
@@ -83,6 +83,13 @@ country7 = Country.new({
   })
   country7.save()
 
+
+  city1 = City.new({
+    'name' => 'Berlin',
+    'country_id' => country1.id,
+    'visit' => false
+    })
+    city1.save()
 
 binding.pry
 nil
