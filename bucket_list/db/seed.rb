@@ -6,6 +6,8 @@ require('pry')
 
 Continent.delete_all()
 
+# Continents
+
 continent1 = Continent.new({
   'name' => 'Europe'
 })
@@ -40,6 +42,8 @@ continent7 = Continent.new({
   'name' => 'Antarctica'
   })
 continent7.save()
+
+# Countries
 
 country1 = Country.new({
   'name' => "Germany",
@@ -83,13 +87,70 @@ country7 = Country.new({
   })
   country7.save()
 
+# Cities
 
-  city1 = City.new({
-    'name' => 'Berlin',
-    'country_id' => country1.id,
-    'visit' => false
-    })
-    city1.save()
+city1 = City.new({
+  'name' => 'Berlin',
+  'country_id' => country1.id,
+  'visit' => false
+  })
+  city1.save()
+
+city2 = City.new({
+  'name' => 'Paris',
+  'country_id' => country7.id,
+  'visit' => false
+  })
+  city2.save()
+
+city3 = City.new({
+  'name' => 'Tokyo',
+  'country_id' => country5.id,
+  'visit' => false
+  })
+  city3.save()
+
+city4 = City.new({
+  'name' => 'Rio',
+  'country_id' => country6.id,
+  'visit' => false
+  })
+  city4.save()
+
+city5 = City.new({
+  'name' => 'Sydeny',
+  'country_id' => country4.id,
+  'visit' => false
+  })
+  city5.save()
+
+city6 = City.new({
+  'name' => 'New York',
+  'country_id' => country2.id,
+  'visit' => false
+  })
+  city6.save()
+
+city7 = City.new({
+  'name' => 'Nice',
+  'country_id' => country7.id,
+  'visit' => false
+  })
+  city7.save()
+
+city8 = City.new({
+  'name' => 'Frankfurt',
+  'country_id' => country1.id,
+  'visit' => false
+  })
+  city8.save()
+
+city9 = City.new({
+  'name' => 'Perth',
+  'country_id' => country4.id,
+  'visit' => false
+  })
+  city9.save()
 
 binding.pry
 nil
