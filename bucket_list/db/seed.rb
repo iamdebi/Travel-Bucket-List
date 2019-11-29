@@ -1,7 +1,7 @@
 require_relative('../models/continent')
 require_relative('../models/country')
 require_relative('../models/city')
-# require_relative('../models/attraction')
+require_relative('../models/attraction')
 require('pry')
 
 Continent.delete_all()
@@ -151,6 +151,16 @@ city9 = City.new({
   'visit' => false
   })
   city9.save()
+
+  #  Atrractions
+  attraction1 = Attraction.new({
+    'name' => "Berlin Wall",
+    'review' => 'Good',
+    'review_rating' => 4,
+    'city_id' => city1.id
+    })
+
+    attraction1.save()
 
 binding.pry
 nil
