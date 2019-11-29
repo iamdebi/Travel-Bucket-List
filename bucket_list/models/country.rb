@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 require_relative('city')
+require_relative('continent')
 
 class Country
 
@@ -53,7 +54,7 @@ class Country
   end
 
   def view_cities()
-    sql = "SELECT * FROM cities where country_id = $1"
+    sql = "SELECT * FROM cities WHERE country_id = $1"
     values = [@id]
     cities = SqlRunner.run(sql, values)
     return cities.map{|city| City.new(city)}

@@ -6,7 +6,7 @@ also_reload( '../models/*' )
 
 get '/continents' do
   @continents = Continent.view_all()
-  erb( :"/continent/index" )
+  erb(:"/continent/index")
 end
 
 get '/continents/:id' do
