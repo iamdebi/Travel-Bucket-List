@@ -1,1 +1,8 @@
 <h2><%= @country.name %></h2>
+
+<ul>
+  <% for city in @country.view_cities %>
+  <li> <%=city.name%> </li>
+  <% end %>
+
+</ul>
