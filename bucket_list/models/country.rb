@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('city')
 
 class Country
 
@@ -40,8 +41,8 @@ class Country
 
   def self.view_all()
     sql = "SELECT * FROM countries;"
-    attractions = SqlRunner.run(sql)
-    return attractions.map{|attraction| Attraction.new(attraction)}
+    countries = SqlRunner.run(sql)
+    return countries.map{|country| Country.new(country)}
   end
 
   def self.view(id)
