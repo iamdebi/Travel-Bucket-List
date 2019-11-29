@@ -32,15 +32,19 @@ post '/countries' do
   redirect '/countries'
 end
 
-
 #edit
 get '/countries/:id/edit' do
-
+  id = params['id'].to_i()
+  @country = Country.view(id)
+  @continents = Continent.view_all()
+  erb(:"/country/edit")
 end
 
 #update
 post '/countries/:id' do
-
+  country = Country.new(params)
+  country.update()
+  redirect '/countries'
 end
 
 #delete

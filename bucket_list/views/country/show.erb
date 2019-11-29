@@ -6,6 +6,10 @@
   <% end %>
 </ul>
 
+<div>
 <form action="/countries/<%= @country.id %>/delete" method="POST">
 <button type="submit" delete ="delete">Delete</button>
 </form>
+
+<a class="button" href="/countries/<%= @country.id %>/edit">Edit</a>
+</div>

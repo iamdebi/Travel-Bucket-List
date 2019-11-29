@@ -1,0 +1,13 @@
+<form action="/countries/<%= @country.id %>" method="POST">
+  <label for="name">Name:</label>
+  <input required type="text" name="name" value="<%=@country.name%>">
+
+  <label>Select the continent:</label>
+    <select required name="continent_id" id="continent-id">
+      <% for continent in @continents %>
+        <option <%= "selected" if @country.continent == continent %> value="<%= continent.id %>"><%= continent.name %></option>
+      <% end %>
+    </select>
+
+  <button type="submit" value="Add Country">Add Country</button>
+</form>
