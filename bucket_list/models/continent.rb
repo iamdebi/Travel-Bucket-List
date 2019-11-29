@@ -48,7 +48,15 @@ class Continent
     sql ="SELECT * FROM continents WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return result.first
+    return Continent.new(result.first)
+  end
+
+  def self.find( id )
+    sql = "SELECT * FROM zombies
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Continent.new(results.first)
   end
 
   def view_countries()

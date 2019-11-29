@@ -52,7 +52,7 @@ class Attraction
     sql ="SELECT * FROM attractions WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return result.first
+    return Attraction.new(result.first)
   end
 
 end

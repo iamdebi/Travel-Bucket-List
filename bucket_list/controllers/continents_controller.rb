@@ -12,5 +12,5 @@ end
 get '/continents/:id' do
   id = params['id'].to_i
   @continent = Continent.view(id)
-  erb(:"continent/show")
+  erb(:"/continent/show")
 end

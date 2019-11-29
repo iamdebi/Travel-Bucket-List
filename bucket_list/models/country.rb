@@ -49,7 +49,7 @@ class Country
     sql ="SELECT * FROM countries WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return result.first
+    return Country.new(result.first)
   end
 
   def view_cities()
