@@ -4,5 +4,8 @@
   <% for city in @country.view_cities %>
   <li> <%=city.name%> </li>
   <% end %>
-
 </ul>
+
+<form action="/countries/<%= @country.id %>/delete" method="POST">
+<button type="submit" delete ="delete">Delete</button>
+</form>

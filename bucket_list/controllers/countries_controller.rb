@@ -1,7 +1,9 @@
 require('sinatra')
 require('sinatra/contrib/all')
+require('pry')
 
 require_relative('../models/country.rb')
+require_relative('../models/continent.rb')
 also_reload( '../models/*' )
 
 #index
@@ -12,7 +14,8 @@ end
 
 #new
 get '/countries/new' do
-
+  @continents = Continent.view_all()
+  erb(:"/country/new")
 end
 
 #show
@@ -23,8 +26,12 @@ end
 
 #create
 post '/countries' do
-
+  country = params
+  new_country = Country.new(country)
+  new_country.save()
+  redirect '/countries'
 end
+
 
 #edit
 get '/countries/:id/edit' do
@@ -38,5 +45,8 @@ end
 
 #delete
 post '/countries/:id/delete' do
-
+  id = params['id'].to_i()
+  delete_country = Country.view(id)
+  delete_country.delete
+  redirect '/countries'
 end
