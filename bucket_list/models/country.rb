@@ -8,9 +8,9 @@ class Country
   attr_accessor :name
 
   def initialize(details)
-    @id = details['id'] if details['id']
+    @id = details['id'].to_i if details['id']
     @name = details['name']
-    @continent_id = details['continent_id']
+    @continent_id = details['continent_id'].to_i()
   end
 
   def save()
@@ -58,6 +58,13 @@ class Country
     values = [@id]
     cities = SqlRunner.run(sql, values)
     return cities.map{|city| City.new(city)}
+  end
+
+  def continent()
+    sql = "SELECT * FROM continents WHERE id = $1;"
+    values = [@continent_id]
+    continent = SqlRunner.run(sql, values)
+    return Continent.new(continent.first)
   end
 
 end

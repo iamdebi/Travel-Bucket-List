@@ -7,7 +7,7 @@ class Continent
   attr_accessor :name
 
   def initialize(details)
-    @id = details['id'] if details['id']
+    @id = details['id'].to_i() if details['id']
     @name = details['name']
   end
 

@@ -1,0 +1,24 @@
+<form action="/countries" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="name">
+
+  <label>Select the continent:
+    <select name="country_id">
+
+      <%= for continent in @continents %>
+        <option value="<%= continent.id %>"><%= continent.name %></option>
+      <%= end %>
+    </select>
+  </label>
+</form>
+
+
+<form action="/bitings" method="post">
+  <label>
+  Select a zombie:
+    <select name="zombie_id">
+      <% for zombie in @zombies %>
+      <option value="<%= zombie.id %>"><%= zombie.name %></option>
+      <% end %>
+    </select>
+  </label>
