@@ -37,4 +37,24 @@ class Continent
     SqlRunner.run(sql, values)
   end
 
+  def self.view_all()
+    sql = "SELECT * FROM continents;"
+    attractions = SqlRunner.run(sql)
+    return attractions.map{|attraction| Attraction.new(attraction)}
+  end
+
+  def self.view(id)
+    sql ="SELECT * FROM continents WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return result.first
+  end
+
+  def view_countries()
+    sql = "SELECT * FROM countries where continent_id = $1"
+    values = [@id]
+    countries = SqlRunner.run(sql, values)
+    return countries.map{|country| Country.new(country)}
+  end
+
 end

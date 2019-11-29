@@ -42,7 +42,7 @@ class Attraction
     SqlRunner.run(sql, values)
   end
 
-  def self.veiw_all()
+  def self.view_all()
     sql = "SELECT * FROM attractions"
     attractions = SqlRunner.run(sql)
     return attractions.map{|attraction| Attraction.new(attraction)}

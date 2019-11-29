@@ -40,6 +40,26 @@ class City
     SqlRunner.run(sql, values)
   end
 
+  def self.view_all()
+    sql = "SELECT * FROM cities"
+    attractions = SqlRunner.run(sql)
+    return attractions.map{|attraction| Attraction.new(attraction)}
+  end
+
+  def self.view(id)
+    sql ="SELECT * FROM cities WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return result.first
+  end
+
+  def view_attractions()
+    sql = "SELECT * FROM attractions where attraction_id = $1"
+    values = [@id]
+    attractions = SqlRunner.run(sql, values)
+    return attractions.map{|attraction| Attraction.new(attraction)}
+  end
+
 
 
 end
