@@ -20,7 +20,21 @@ class Country
   end
 
   def self.delete_all()
-    sql = "DELeTE FROM countries"
+    sql = "DELETE FROM countries"
+    SqlRunner.run(sql, values)
+  end
+
+  def update()
+    sql = "UPDATE countries SET
+    (name, continent_id) = ($1, $2) WHERE id = $3 "
+    values = [@name, @continent_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM countries
+    WHERE id = $1"
+    values = [@id]
     SqlRunner.run(sql, values)
   end
 

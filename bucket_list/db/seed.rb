@@ -4,6 +4,7 @@ require_relative('../models/city')
 require_relative('../models/attraction')
 require('pry')
 
+#only need continent.delete_all as the others delete on cascade
 Continent.delete_all()
 
 # Continents

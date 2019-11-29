@@ -23,4 +23,18 @@ class Continent
     SqlRunner.run(sql)
   end
 
+  def update()
+    sql = "UPDATE continents SET
+    name = $1 WHERE id = $2 "
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM continents
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 end
