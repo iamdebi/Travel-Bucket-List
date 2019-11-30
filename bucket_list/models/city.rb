@@ -42,7 +42,7 @@ class City
   end
 
   def self.view_all()
-    sql = "SELECT * FROM cities"
+    sql = "SELECT * FROM cities;"
     cities = SqlRunner.run(sql)
     return cities.map{|city| City.new(city)}
   end
@@ -55,7 +55,7 @@ class City
   end
 
   def view_attractions()
-    sql = "SELECT * FROM attractions where attraction_id = $1"
+    sql = "SELECT * FROM attractions where city_id = $1"
     values = [@id]
     attractions = SqlRunner.run(sql, values)
     return attractions.map{|attraction| Attraction.new(attraction)}
