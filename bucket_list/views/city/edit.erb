@@ -9,5 +9,12 @@
       <% end %>
     </select>
 
-  <button type="submit" value="Add City">Add City</button>
+    <label>Have you visited</label>
+    <label>Yes</label>
+      <input <% if @city.visit == 't' %> checked = "checked" <% end %> type="radio" name="visit" value="true">
+
+      <label>Not yet</label>
+      <input <% if @city.visit == 'f' %> checked = "checked" <% end %> type="radio" name="visit" value="false">
+
+  <button type="submit" value="Update City">Update City</button>
 </form>

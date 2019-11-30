@@ -2,5 +2,11 @@
 <% for city in @cities %>
 <div>
   <h1><a href="/cities/<%= city.id %>"><%= city.name %></a></h1>
+  <h3>Visited?</h3>
+    <% if city.visit == "t" %>
+    <p> DONE </p>
+    <% elsif city.visit === "f"  %>
+    <p> To Do</p>
+    <% end %>
 </div>
 <% end %>
