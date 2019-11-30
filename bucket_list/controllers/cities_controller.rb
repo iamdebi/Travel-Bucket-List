@@ -12,9 +12,10 @@ also_reload( '../models/*' )
  end
 
  # #new
- # get do
- #
- # end
+ get '/cities/new' do
+   @country = Country.view_all()
+   erb(:"/city/new")
+ end
 
  #show
  get '/cities/:id' do
