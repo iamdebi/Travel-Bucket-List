@@ -18,9 +18,14 @@ also_reload( '../models/*' )
    erb(:"/city/new")
  end
 
- get 'cities/visited' do
+ get '/cities/visited' do
    @cities = City.visited()
    erb(:"/city/visited")
+ end
+
+ get '/cities/to-visit' do
+   @cities = City.to_visit()
+   erb(:"/city/to_visit")
  end
 
  #show

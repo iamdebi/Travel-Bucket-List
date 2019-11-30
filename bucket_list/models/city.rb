@@ -70,11 +70,19 @@ class City
   end
 
   def self.visited
-    sql = "SELECT * FROM cities WHERE visit = true;"
-    cities = SqlRunner.run(sql)
+    sql = "SELECT * FROM cities WHERE visit = $1;"
+    values = [true]
+    cities = SqlRunner.run(sql, values)
     return cities.map{|city| City.new(city)}
   end
 
+
+  def self.to_visit
+    sql = "SELECT * FROM cities WHERE visit = $1;"
+    values = [false]
+    cities = SqlRunner.run(sql, values)
+    return cities.map{|city| City.new(city)}
+  end
 
 
 end
