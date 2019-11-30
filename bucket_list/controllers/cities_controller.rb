@@ -40,6 +40,9 @@ also_reload( '../models/*' )
  # end
 
  # # delete
- # post do
- #
- # end
+ post '/cities/:id/delete' do
+   id = params['id'].to_i()
+   delete_city = City.view(id)
+   delete_city.delete()
+   redirect '/cities'
+ end
