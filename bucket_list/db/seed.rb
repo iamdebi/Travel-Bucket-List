@@ -154,14 +154,78 @@ city9 = City.new({
   city9.save()
 
   #  Atrractions
-  attraction1 = Attraction.new({
-    'name' => "Berlin Wall",
-    'review' => 'Good',
-    'review_rating' => 4,
-    'city_id' => city1.id
-    })
+attraction1 = Attraction.new({
+  'name' => "Berlin Wall",
+  'review' => 'Good',
+  'review_rating' => 4,
+  'city_id' => city1.id
+  })
+  attraction1.save()
 
-    attraction1.save()
+attraction2 = Attraction.new({
+  'name' => "statue of liberty",
+  'review' => 'Good',
+  'review_rating' => 2,
+  'city_id' => city6.id
+  })
+  attraction2.save()
+
+attraction3 = Attraction.new({
+  'name' => "Eiffel Tower",
+  'review' => 'Good',
+  'review_rating' => 3,
+  'city_id' => city2.id
+  })
+  attraction3.save()
+
+attraction4 = Attraction.new({
+  'name' => "empire state building",
+  'review' => 'Good',
+  'review_rating' => 1,
+  'city_id' => city6.id
+  })
+  attraction4.save()
+
+attraction5 = Attraction.new({
+  'name' => "time square",
+  'review' => 'Good',
+  'review_rating' => 2,
+  'city_id' => city6.id
+  })
+  attraction5.save()
+
+attraction6 = Attraction.new({
+  'name' => "sydney oprear house",
+  'review' => 'Good',
+  'review_rating' => 4,
+  'city_id' => city5.id
+  })
+  attraction6.save()
+
+
+attraction7 = Attraction.new({
+  'name' => "check point charlie",
+  'review' => 'Good',
+  'review_rating' => 3,
+  'city_id' => city1.id
+  })
+  attraction7.save()
+
+attraction8 = Attraction.new({
+  'name' => "louver",
+  'review' => 'Good',
+  'review_rating' => 5,
+  'city_id' => city2.id
+  })
+  attraction8.save()
+
+attraction9 = Attraction.new({
+  'name' => "Christ the Redeemer",
+  'review' => 'Good',
+  'review_rating' => 4,
+  'city_id' => city4.id
+  })
+  attraction9.save()
 
 binding.pry
 nil

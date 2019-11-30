@@ -4,6 +4,7 @@ require('pry')
 
 require_relative('../models/city')
 require_relative('../models/country.rb')
+require_relative('../models/attraction')
 also_reload( '../models/*' )
 
  #index

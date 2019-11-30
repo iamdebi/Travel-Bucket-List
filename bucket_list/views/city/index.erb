@@ -8,5 +8,10 @@
     <% elsif city.visit === "f"  %>
     <p> To Do</p>
     <% end %>
+    <h3>Attractions</h3>
+    <% attractions = city.view_attractions %>
+    <% for attraction in attractions %>
+    <p> <%= attraction.name %></p>
+    <% end %>
 </div>
 <% end %>
