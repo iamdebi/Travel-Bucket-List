@@ -69,6 +69,12 @@ class City
     return Country.new(country.first)
   end
 
+  def self.visited
+    sql = "SELECT * FROM cities WHERE visit = true;"
+    cities = SqlRunner.run(sql)
+    return cities.map{|city| City.new(city)}
+  end
+
 
 
 end

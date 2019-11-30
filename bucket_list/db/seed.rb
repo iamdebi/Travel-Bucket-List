@@ -100,14 +100,14 @@ city1 = City.new({
 city2 = City.new({
   'name' => 'Paris',
   'country_id' => country7.id,
-  'visit' => false
+  'visit' => true
   })
   city2.save()
 
 city3 = City.new({
   'name' => 'Tokyo',
   'country_id' => country5.id,
-  'visit' => false
+  'visit' => true
   })
   city3.save()
 
@@ -121,7 +121,7 @@ city4 = City.new({
 city5 = City.new({
   'name' => 'Sydeny',
   'country_id' => country4.id,
-  'visit' => false
+  'visit' => true
   })
   city5.save()
 
@@ -149,7 +149,7 @@ city8 = City.new({
 city9 = City.new({
   'name' => 'Perth',
   'country_id' => country4.id,
-  'visit' => false
+  'visit' => true
   })
   city9.save()
 

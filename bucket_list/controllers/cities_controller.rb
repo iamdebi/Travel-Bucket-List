@@ -18,6 +18,11 @@ also_reload( '../models/*' )
    erb(:"/city/new")
  end
 
+ get 'cities/visited' do
+   @cities = City.visited()
+   erb(:"/city/visited")
+ end
+
  #show
  get '/cities/:id' do
    id = params['id'].to_i
@@ -40,10 +45,13 @@ also_reload( '../models/*' )
    erb(:"/city/edit")
  end
 
- # # update
- # post do
- #
- # end
+ # update
+ post '/cities/:id' do
+   city = City.new(params)
+   city.update()
+   redirect '/cities'
+
+ end
 
  # delete
  post '/cities/:id/delete' do
