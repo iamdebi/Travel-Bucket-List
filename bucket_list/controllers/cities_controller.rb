@@ -24,10 +24,12 @@ also_reload( '../models/*' )
    erb(:"/city/show")
  end
 
- # # create
- # post do
- #
- # end
+ # create
+ post '/cities' do
+   new_city = City.new(params)
+   new_city.save()
+   redirect'/cities'
+ end
 
  # # edit
  # get do
@@ -39,7 +41,7 @@ also_reload( '../models/*' )
  #
  # end
 
- # # delete
+ # delete
  post '/cities/:id/delete' do
    id = params['id'].to_i()
    delete_city = City.view(id)

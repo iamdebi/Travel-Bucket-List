@@ -1,4 +1,8 @@
-<h2><%= @city.name %></h2>
+<div>
+  <h2><%= @city.name %></h2>
+  <a href="/cities/new">Edit</a>
+</div>
+<a href="/cities/new">Edit</a>
 
 <div>
   <form action="/cities/<%= @city.id %>/delete" method="POST">
