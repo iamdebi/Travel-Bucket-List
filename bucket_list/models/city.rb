@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 require_relative('attraction')
+require_relative('country')
 
 class City
 
@@ -59,6 +60,13 @@ class City
     values = [@id]
     attractions = SqlRunner.run(sql, values)
     return attractions.map{|attraction| Attraction.new(attraction)}
+  end
+
+  def country()
+    sql ="SELECT * FROM countries WHERE id = $1;"
+    values = [@country_id]
+    country = SqlRunner.run(sql,values)
+    return Country.new(country.first)
   end
 
 

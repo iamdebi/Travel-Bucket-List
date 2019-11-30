@@ -3,6 +3,7 @@ require('sinatra/contrib/all')
 require('pry')
 
 require_relative('../models/city')
+require_relative('../models/country.rb')
 also_reload( '../models/*' )
 
  #index
@@ -31,10 +32,13 @@ also_reload( '../models/*' )
    redirect'/cities'
  end
 
- # # edit
- # get do
- #
- # end
+ # edit
+ get '/cities/:id/edit' do
+   id = params['id'].to_i()
+   @countries = Country.view_all()
+   @city = City.view(id)
+   erb(:"/city/edit")
+ end
 
  # # update
  # post do

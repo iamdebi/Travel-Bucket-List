@@ -1,0 +1,13 @@
+<form action="/cities/<%= @city.id %>" method="POST">
+  <label for="name">Name:</label>
+  <input required type="text" name="name" value="<%=@city.name%>">
+
+  <label>Select the country:</label>
+    <select required name="country_id" id="country-id">
+      <% for country in @countries %>
+        <option <%= "selected" if @city.country == country %> value="<%= country.id %>"><%= country.name %></option>
+      <% end %>
+    </select>
+
+  <button type="submit" value="Add City">Add City</button>
+</form>
