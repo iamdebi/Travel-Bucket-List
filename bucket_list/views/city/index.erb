@@ -11,7 +11,7 @@
     <h3>Attractions</h3>
     <% attractions = city.view_attractions %>
     <% for attraction in attractions %>
-    <p> <%= attraction.name %></p>
+    <p><a href="/attractions/<%= attraction.id %>"><%= attraction.name %></a> </p>
     <% end %>
 </div>
 <% end %>
