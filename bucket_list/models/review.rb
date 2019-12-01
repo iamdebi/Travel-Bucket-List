@@ -18,7 +18,7 @@ class Review
     sql = "INSERT INTO reviews
     (title, review, review_rating, attraction_id)
     VALUES ($1, $2, $3, $4) RETURNING id;"
-    values = [@tile, @review, @review_rating, @attraction_id]
+    values = [@title, @review, @review_rating, @attraction_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i()
   end

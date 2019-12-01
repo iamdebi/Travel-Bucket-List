@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 require_relative('city')
+require_relative('review')
 
 
 class Attraction
@@ -60,6 +61,13 @@ class Attraction
     values = [@city_id]
     result = SqlRunner.run(sql, values)
     return City.new(result.first)
+  end
+
+  def reviews
+    sql = "SELECT * FROM reviews WHERE attraction_id = $1"
+    values = [@id]
+    reviews = SqlRunner.run(sql, values)
+    return reviews.map{|review| Review.new(review)}
   end
 
 end

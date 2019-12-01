@@ -1,5 +1,15 @@
 <h3><%= @attraction.city.name %></h3>
-<h2> <%=@attraction.name%> </h2>
-<form action="attraction/<%= @attraction.id %>" method="post">
+<h2><%=@attraction.name%> </h2>
+<p><a href="/attractions/<%= @attraction.id %>/edit">Edit Atrraction</a></p>
+<form action="/attractions/<%= @attraction.id %>/delete" method="post">
+  <button type="submit" name="delete">Delete Attraction</button>
 
 </form>
+<p><a class="button" href="/review/new">Add Review</a></p>
+<h3>Reviews</h3>
+<% for review in @attraction.reviews  %>
+<h4>Review</h4>
+<p><%= review.title %></p>
+<p><%= review.review_rating %></p>
+<p><%= review.review %></p>
+<% end %>

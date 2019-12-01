@@ -219,5 +219,78 @@ review1 = Review.new({
   })
   review1.save()
 
+review2 = Review.new({
+  'title' => 'enjoyable',
+  'review' => 'Good, would visit again',
+  'review_rating' => 3,
+  'attraction_id' => attraction8.id
+  })
+  review2.save()
+
+review3 = Review.new({
+  'title' => 'did not enjoy',
+  'review' => 'will not be back',
+  'review_rating' => 1,
+  'attraction_id' => attraction9.id
+  })
+  review3.save()
+
+review4 = Review.new({
+  'title' => 'would never recommend',
+  'review' => 'Very big let down',
+  'review_rating' => 0,
+  'attraction_id' => attraction1.id
+  })
+  review4.save()
+
+review5 = Review.new({
+  'title' => 'Would go again',
+  'review' => 'Excellent, loved every momonemt, well worth a visit',
+  'review_rating' => 4,
+  'attraction_id' => attraction2.id
+  })
+  review5.save()
+
+review6 = Review.new({
+  'title' => 'Would go again',
+  'review' => 'Excellent, loved every momonemt, well worth a visit',
+  'review_rating' => 4,
+  'attraction_id' => attraction3.id
+  })
+  review6.save()
+
+review7 = Review.new({
+  'title' => 'Would go again',
+  'review' => 'Excellent, loved every momonemt, well worth a visit',
+  'review_rating' => 4,
+  'attraction_id' => attraction4.id
+  })
+  review7.save()
+
+review8 = Review.new({
+  'title' => 'Would go again',
+  'review' => 'Excellent, loved every momonemt, well worth a visit',
+  'review_rating' => 4,
+  'attraction_id' => attraction5.id
+  })
+  review8.save()
+
+review8 = Review.new({
+  'title' => 'Would go again',
+  'review' => 'Excellent, loved every momonemt, well worth a visit',
+  'review_rating' => 4,
+  'attraction_id' => attraction6.id
+  })
+  review8.save()
+
+review9 = Review.new({
+  'title' => 'was okay',
+  'review' => 'enjoied it but would never go out of my way to go',
+  'review_rating' => 2,
+  'attraction_id' => attraction7.id
+  })
+  review9.save()
+
+
 binding.pry
 nil

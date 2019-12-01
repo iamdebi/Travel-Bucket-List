@@ -1,5 +1,6 @@
 require('sinatra')
 require('sinatra/contrib/all')
+require('pry')
 
 require_relative('../models/attraction')
 require_relative('../models/city')
@@ -34,18 +35,24 @@ end
 
 # edit
 get '/attractions/:id/edit' do
-
+  id = params['id'].to_i()
+  @cities = City.view_all()
+  @attraction = Attraction.view(id)
+  erb(:"/attraction/edit")
 end
 
 # update
 post '/attractions/:id' do
-
+  attraction = Attraction.new(params)
+  attraction.update()
   redirect '/attractions'
 
 end
 
 # delete
 post '/attractions/:id/delete' do
-
-  redirect '/atractions'
+  id = params['id'].to_i()
+  delete_attraction = Attraction.view(id)
+  delete_attraction.delete
+  redirect '/attractions'
 end
