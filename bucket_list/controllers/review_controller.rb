@@ -20,13 +20,14 @@ end
 # show
 get '/reviews/:id' do
   id = params['id'].to_i()
-
+  @review = Review.view(id)
   erb(:"/review/show")
 end
 
 # create
 post '/reviews' do
-
+  new_review = Review.new(params)
+  new_review.save()
   redirect '/reviews'
 end
 
