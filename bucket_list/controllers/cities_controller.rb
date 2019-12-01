@@ -51,6 +51,12 @@ also_reload( '../models/*' )
    erb(:"/city/edit")
  end
 
+ get '/cities/:id/attractions' do
+   id = params['id']
+   @city = City.view(id)
+   erb(:"/city/attractions")
+ end
+
  # update
  post '/cities/:id' do
    city = City.new(params)

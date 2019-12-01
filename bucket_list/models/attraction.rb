@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('city')
+
 
 class Attraction
 
@@ -53,6 +55,13 @@ class Attraction
     values = [id]
     result = SqlRunner.run(sql, values)
     return Attraction.new(result.first)
+  end
+
+  def city
+    sql = "SELECT * FROM cities WHERE id = $1"
+    values = [@city_id]
+    result = SqlRunner.run(sql, values)
+    return City.new(result.first)
   end
 
 end

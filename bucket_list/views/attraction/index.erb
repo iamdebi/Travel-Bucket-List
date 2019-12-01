@@ -1,0 +1,6 @@
+<a href="/attractions/new">Add Attractions</a>
+
+<% for attraction in @attractions %>
+
+<p><a href="/attractions/<%= attraction.id %>"><%= attraction.name %></a></p>
+<% end %>

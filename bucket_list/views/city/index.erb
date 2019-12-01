@@ -3,15 +3,12 @@
 <div>
   <h1><a href="/cities/<%= city.id %>"><%= city.name %></a></h1>
   <h3>Visited?</h3>
-    <% if city.visit == "t" %>
+    <% if city.visit === "t" %>
     <p> DONE </p>
     <% elsif city.visit === "f"  %>
     <p> To Do</p>
     <% end %>
-    <h3>Attractions</h3>
-    <% attractions = city.view_attractions %>
-    <% for attraction in attractions %>
-    <p><a href="/attractions/<%= attraction.id %>"><%= attraction.name %></a> </p>
-    <% end %>
+    <h3><a href="/cities/<%= city.id %>/attractions">Attractions</a></h3>
+
 </div>
 <% end %>
