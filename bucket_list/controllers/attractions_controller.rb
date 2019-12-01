@@ -12,7 +12,7 @@ get '/attractions' do
   erb(:"/attraction/index")
 end
 
-# #new
+ #new
 get '/attractions/new' do
   @cities = City.view_all
   erb(:"/attraction/new")
@@ -27,7 +27,8 @@ end
 
 # create
 post '/attractions' do
-  
+  new_attraction = Attraction.new(params)
+  new_attraction.save()
   redirect'/attractions'
 end
 

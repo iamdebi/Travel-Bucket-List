@@ -5,21 +5,19 @@ require_relative('city')
 class Attraction
 
   attr_reader :id, :city_id
-  attr_accessor :name, :review, :review_rating
+  attr_accessor :name
 
   def initialize(details)
     @id = details['id'] if details['id']
     @name = details['name']
-    @review = details['review']
-    @review_rating = details['review_rating']
     @city_id = details['city_id']
   end
 
   def save
     sql = "INSERT INTO attractions
-    (name, review, review_rating, city_id)
-    VALUES ($1, $2, $3, $4) RETURNING id;"
-    values = [@name, @review, @review_rating, @city_id]
+    (name, city_id)
+    VALUES ($1, $2) RETURNING id;"
+    values = [@name, @city_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i()
   end
@@ -31,9 +29,9 @@ class Attraction
 
   def update()
     sql = "UPDATE attractions SET
-    (name, review, review_rating, city_id) =
-    ($1, $2, $3, $4) WHERE id = $5 "
-    values = [@name, @review, @review_rating, @city_id, @id]
+    (name, city_id) =
+    ($1, $2) WHERE id = $3 "
+    values = [@name, @city_id, @id]
     SqlRunner.run(sql, values)
   end
 

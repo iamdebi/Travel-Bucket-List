@@ -1,6 +1,6 @@
 <form action="/attractions" method="POST">
   <label for=""></label>
-  <input required type="text">
+  <input value="name" required type="text">
 
   <label> Select the city: </label>
     <select name="city_id">
@@ -9,6 +9,7 @@
       <option required value="<%= city.id %>"> <%= city.name %> </option>
       <% end %>
     </select>
+
 
     <button type="submit" value="Add Attraction">Add Attraction</button>
 </form>

@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS reviews;
 DROP TABLE IF EXISTS attractions;
 DROP TABLE IF EXISTS cities;
 DROP TABLE IF EXISTS countries;
@@ -24,7 +25,13 @@ CREATE TABLE cities(
 CREATE TABLE attractions(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
+  city_id INT REFERENCES cities(id) ON DELETE CASCADE
+);
+
+CREATE TABLE reviews(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR,
   review TEXT,
   review_rating INT,
-  city_id INT REFERENCES cities(id) ON DELETE CASCADE
+  attraction_id INT REFERENCES attractions(id) ON DELETE CASCADE
 );
