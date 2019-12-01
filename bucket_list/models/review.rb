@@ -63,5 +63,19 @@ class Review
     return Attraction.new(result.first)
   end
 
+  def review_word
+    case @review_rating.to_i()
+    when 0
+      return "Terrible"
+    when 1
+      return "Poor"
+    when 2
+      return "Okay"
+    when 3
+      return "Good"
+    when 4
+      return "Excellent"
+    end
+  end
 
 end

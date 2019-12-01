@@ -5,11 +5,13 @@
   <button type="submit" name="delete">Delete Attraction</button>
 
 </form>
-<p><a class="button" href="/review/new">Add Review</a></p>
+<p><a class="button" href="/reviews/new">Add Review</a></p>
 <h3>Reviews</h3>
 <% for review in @attraction.reviews  %>
 <h4>Review</h4>
 <p><%= review.title %></p>
-<p><%= review.review_rating %></p>
+<p><%= review.review_word %></p>
 <p><%= review.review %></p>
 <% end %>
+
+<p><%= review.review_word %></p>

@@ -1,0 +1,30 @@
+<form action="/reviews" method="POST">
+
+  <label for="tile">Enter a title for your review:
+  <input type="text" name="tile" maxlength="25">
+  </label>
+
+  <label for="review">Enter your review:
+  <input type="text" name="review" maxlength="350">
+  </label>
+
+  <label for="review_rating">Review rating:
+  <select class="" name="review_rating">
+    <option value=0>Terrible</option>
+    <option value=1>Poor</option>
+    <option value=2>Okay</option>
+    <option value=3>Good</option>
+    <option value=4>Excellent</option>
+  </select>
+  </label>
+
+  <label>Select attraction</label>
+  <select name="attraction_id" id="attraction-id">
+      <option selected disabled value="">Please select a attraction</option>
+    <% for attraction in @attractions %>
+      <option required value="<%= attraction.id %>"><%= attraction.name %></option>
+    <% end %>
+  </select>
+
+  <button type="submit" value="Add Review">Add Review</button>
+</form>

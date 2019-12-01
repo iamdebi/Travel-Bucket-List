@@ -13,7 +13,7 @@ end
 
 # new
 get '/reviews/new' do
-
+  @attractions = Attraction.view_all
   erb(:'/review/new')
 end
 
@@ -31,16 +31,21 @@ post '/reviews' do
 end
 
 # edit
-get do
+get '/reviews/:id/edit' do
 
+  erb(:"review/edit")
 end
 
 # update
-post do
+post '/reviews/:id' do
 
+  redirect '/reviews'
 end
 
 # delete
-post do
-
+post '/reviews/:id/delete' do
+  id = params['id'].to_i()
+  delete_review = Review.view(id)
+  delete_review.delete
+  redirect '/reviews'
 end
