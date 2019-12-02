@@ -14,7 +14,7 @@ get '/' do
   erb( :home )
 end
 
-post '/search/:id' do
+post '/search' do
   @search = Search.search(params['search'])
   erb( :search )
 end

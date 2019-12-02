@@ -18,7 +18,15 @@ class Search
     end
   end
 
-
-
+  # def self.class_type(params)
+  #   if params == "City"
+  #   class_type = "cities"
+  #   elsif params == "Country"
+  #   class_type = "countries"
+  #   else params == "Continent"
+  #   class_type = "continents"
+  #   end
+  #   return class_type
+  # end
 
 end
