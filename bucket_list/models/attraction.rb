@@ -70,4 +70,14 @@ class Attraction
     return reviews.map{|review| Review.new(review)}
   end
 
+  def avg_review_rating
+    review_total = 0
+    reviews = self.reviews
+    for review in reviews
+      review_total += review.review_rating
+    end
+    average = review_total/reviews.size()
+    return average
+  end
+
 end

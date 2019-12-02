@@ -7,10 +7,10 @@ class Review
   attr_accessor :title, :review, :review_rating
 
   def initialize(details)
-    @id = details['id'] if details['id']
+    @id = details['id'].to_i() if details['id']
     @title = details['title']
     @review = details['review']
-    @review_rating = details['review_rating']
+    @review_rating = details['review_rating'].to_i()
     @attraction_id = details['attraction_id']
   end
 
