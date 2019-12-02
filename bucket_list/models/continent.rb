@@ -4,17 +4,18 @@ require_relative('country')
 class Continent
 
   attr_reader :id
-  attr_accessor :name
+  attr_accessor :name, :img
 
   def initialize(details)
     @id = details['id'].to_i() if details['id']
     @name = details['name']
+    @img = details['img']
   end
 
   def save()
-    sql = "INSERT INTO continents (name)
-     VALUES ($1) RETURNING id"
-    values = [@name]
+    sql = "INSERT INTO continents (name, img)
+     VALUES ($1, $2) RETURNING id"
+    values = [@name, @img]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i()
   end
@@ -26,8 +27,8 @@ class Continent
 
   def update()
     sql = "UPDATE continents SET
-    name = $1 WHERE id = $2 "
-    values = [@name, @id]
+    name = ($1, $2) WHERE id = $3 "
+    values = [@name, @img, @id]
     SqlRunner.run(sql, values)
   end
 

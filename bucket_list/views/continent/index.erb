@@ -1,13 +1,14 @@
 <h1>Continents</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<div class="continent continent-container">
   <% for continent in @continents %>
-  <tr>
-    <td><%= continent.name%></td>
-    <td><a class ="button" href="/continents/<%= continent.id  %>">Show countries in <%=continent.name%></a></td>
+  <div class="">
+  <div class ="continent-tile">
+    <img src="<%= continent.img  %>" alt="">
+      <div class="continent-title">
+        <a class ="button" href="/continents/<%= continent.id  %>"><%= continent.name%></a>
+      </div>
+    </div>
+    </div>
   <% end %>
-  </tr>
-</table>
+</div>

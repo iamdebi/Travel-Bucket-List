@@ -12,39 +12,40 @@ Continent.delete_all()
 # Continents
 
 continent1 = Continent.new({
-  'name' => 'Europe'
+  'name' => 'Europe',
+  'img' => '/images/continents/europeglobe.png'
 })
 continent1.save()
 
 continent2 = Continent.new({
-  'name' => 'Africa'
+  'name' => 'Africa',
+  'img' => '/images/continents/africaglobe.png'
   })
 continent2.save()
 
 continent3 = Continent.new({
-  'name' => 'Asia'
+  'name' => 'Asia',
+  'img' => '/images/continents/asiaglobe.png'
   })
 continent3.save()
 
 continent4 = Continent.new({
-  'name' => 'North America'
+  'name' => 'North America',
+  'img' => '/images/continents/northamericaglobe.png'
   })
 continent4.save()
 
 continent5 = Continent.new({
-  'name' => 'South America'
+  'name' => 'South America',
+  'img' => '/images/continents/southamericaglobe.png'
   })
 continent5.save()
 
 continent6 = Continent.new({
-  'name' => 'Australlia'
+  'name' => 'Australlia',
+  'img' => '/images/continents/oceaniaglobe.png'
   })
 continent6.save()
-
-continent7 = Continent.new({
-  'name' => 'Antarctica'
-  })
-continent7.save()
 
 # Countries
 

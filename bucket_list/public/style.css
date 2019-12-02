@@ -1,5 +1,11 @@
+body{
+  font-family: 'Indie Flower', cursive;
+}
+
+
 .container{
   display: flex;
+  width: 100%;
 }
 
 .home_header {
@@ -7,16 +13,32 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 400px;
-  align-self: center;
+
   justify-content: center;
-  align-items: center;
 }
 
 .ybl_header{
   color: #ffffff;
-  weight: 20px;
   font-size: 50px;
   text-align: center;
   border-color: #000000;
-  text-shadow: #000000;
+}
+
+.continent{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.continent-tile{
+  width: 100%;
+  height:200px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.continent-title{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
 }

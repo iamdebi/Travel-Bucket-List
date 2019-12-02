@@ -6,7 +6,8 @@ DROP TABLE IF EXISTS continents;
 
 CREATE TABLE continents(
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  img VARCHAR
 );
 
 CREATE TABLE countries(
