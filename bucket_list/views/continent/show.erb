@@ -5,7 +5,7 @@
   <% @continent.view_countries.each do |country| %>
 
   <!-- add link on country name to take to country page -->
-  <li><%= country.name %></li>
-  <a class="button" href="/countries/new">Add Country</a>
+  <a href="/countries/<%=country.id%>"><li><%= country.name %></li></a>
   <% end %>
+  <a class="button" href="/countries/new">Add Country</a>
 </ul>

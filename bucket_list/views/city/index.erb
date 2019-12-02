@@ -1,14 +1,22 @@
 <a href="/cities/new">Add City</a>
 <% for city in @cities %>
 <div>
-  <h1><a href="/cities/<%= city.id %>"><%= city.name %></a></h1>
-  <h3>Visited?</h3>
-    <% if city.visit === "t" %>
-    <p> DONE </p>
-    <% elsif city.visit === "f"  %>
-    <p> To Do</p>
-    <% end %>
-    <h3><a href="/cities/<%= city.id %>/attractions">Attractions</a></h3>
+<table>
+  <th>Visited?</th>
+  <tr>
+    <td>Visited</td>
+  </tr>
+  <% if city.visit === "t" %>
+  <tr>
+    <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
+  </tr>
+  <% elsif city.visit === "f"  %>
+  <tr>
+    <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
+  </tr>
+  <h3><a href="/cities/<%= city.id %>/attractions">Attractions</a></h3>
+  <% end %>
+</table>
 
 </div>
 <% end %>
