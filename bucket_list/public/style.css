@@ -104,7 +104,6 @@ li {
   justify-content: center;
 }
 
-
 span {
   content: "\2713";
   font-size: 22px;
@@ -112,8 +111,31 @@ span {
   padding-bottom: 5px;
 }
 
-
 .container-visit-cities {
   display: flex;
   width: 100%;
+}
+
+.city-tile{
+  width: 300px;
+  height:200px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 3px solid grey;
+  margin: 5px;
+
+}
+
+.city-title{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+  display: flex;
+
+}
+
+.city{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }

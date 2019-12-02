@@ -80,4 +80,8 @@ class Attraction
     return average
   end
 
+  def avg_out_5
+    self.avg_review_rating + 1
+  end
+
 end

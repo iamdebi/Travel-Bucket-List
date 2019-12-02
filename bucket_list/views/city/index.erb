@@ -1,18 +1,24 @@
 <a href="/cities/new">Add City</a>
+<div class="city city-container">
 <% for city in @cities %>
-<div>
+<div class ="city-tile">
   <h1><a href="/cities/<%= city.id %>"><%= city.name %></a></h1>
-<div class="container-visit-cities">
-  <h3>Visited?</h3>
-    <% if city.visit === "t" %>
-    <div class="tick-box"><span>&#10003;</span></div>
-    <% elsif city.visit === "f"  %>
-    <div class="tick-box"></div>
-    <% end %>
-    </div>
-    <h3>
-      <a href="/cities/<%= city.id %>/attractions">Attractions</a>
-    </h3>
+    <div class="city-title">
 
+      <div class="container-visit-cities">
+        <h3>Visited?</h3>
+          <% if city.visit === "t" %>
+            <div class="tick-box"><span>&#10003;</span></div>
+          <% elsif city.visit === "f"  %>
+            <div class="tick-box"></div>
+          <% end %>
+      </div>
+
+      <h5>
+        <a href="/cities/<%= city.id %>/attractions">Attractions</a>
+      </h5>
+
+    </div>
 </div>
 <% end %>
+</div>

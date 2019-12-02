@@ -122,7 +122,7 @@ city4 = City.new({
   city4.save()
 
 city5 = City.new({
-  'name' => 'Sydeny',
+  'name' => 'Sydney',
   'country_id' => country4.id,
   'visit' => true
   })
