@@ -3,6 +3,8 @@ require_relative('../models/country')
 require_relative('../models/city')
 require_relative('../models/attraction')
 require_relative('../models/review')
+require_relative('../models/search')
+
 
 require('pry')
 

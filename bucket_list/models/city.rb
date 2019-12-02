@@ -84,5 +84,15 @@ class City
     return cities.map{|city| City.new(city)}
   end
 
+  def self.search(searched_word)
+    sql = "SELECT * FROM cities WHERE name = $1"
+    values = [searched_word.to_s()]
+    city = SqlRunner.run(sql, values)
+    if city == []
+      return nil
+    else
+      return City.new(city.first)
+    end
+  end
 
 end

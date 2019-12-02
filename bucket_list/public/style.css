@@ -53,14 +53,18 @@ li {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 1200px;
+    justify-content: center;
 }
 
 
 .continent-tile{
-  width: 400px;
-  height:200px;
+  flex: 1;
   flex-wrap: wrap;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .continent-title{

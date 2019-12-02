@@ -61,10 +61,17 @@ class Continent
   end
 
   def view_countries()
-    sql = "SELECT * FROM countries where continent_id = $1"
+    sql = "SELECT * FROM countries WHERE continent_id = $1"
     values = [@id]
     countries = SqlRunner.run(sql, values)
     return countries.map{|country| Country.new(country)}
+  end
+
+  def self.search(searched_word)
+    sql = "SELECT * FROM continents WHERE name = $1"
+    values = [searched_word.to_s()]
+    continent = SqlRunner.run(sql, values)
+    return Continent.new(continent.first)
   end
 
 end
