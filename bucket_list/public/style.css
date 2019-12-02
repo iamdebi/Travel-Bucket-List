@@ -10,8 +10,9 @@ nav {
 .nav-bar{
   display: flex;
   flex-direction: row;
-  padding-left: 25px;
+  padding-left: 10px;
   font-size: 20px;
+  padding-right: 0;
 }
 
 a {
@@ -24,7 +25,8 @@ ul {
 }
 
 li {
-  padding-left: 25px;
+  padding-left: -10px;
+  padding-right: 30px;
   font-size: 20px;
 }
 
@@ -53,13 +55,20 @@ li {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  max-width: 1200px;
-    justify-content: center;
+  justify-content: center;
+}
+
+.continent-image{
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 250px;
+  background-size: contain;
 }
 
 
 .continent-tile{
-  flex: 1;
+  flex: 0 0 25%;
   flex-wrap: wrap;
   padding: 20px;
   display: flex;
@@ -98,7 +107,18 @@ li {
   height: 20px;
   align-self: center;
   margin: 10px;
+  position: relative;
+}
 
+.tick-box--active::after{
+  content: "\2713";
+  position: absolute;
+  top: -45%;
+  bottom: 0;
+  left: 9%;
+  right: 0;
+  color: red;
+  font-size: 30px;
 }
 
 .container-visit{
@@ -108,12 +128,6 @@ li {
   justify-content: center;
 }
 
-span {
-  content: "\2713";
-  font-size: 22px;
-  color: red;
-  padding-bottom: 5px;
-}
 
 .container-visit-cities {
   display: flex;
@@ -142,4 +156,8 @@ span {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+}
+
+.padding-left{
+  padding-left: 10px;
 }

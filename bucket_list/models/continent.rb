@@ -71,7 +71,11 @@ class Continent
     sql = "SELECT * FROM continents WHERE name = $1"
     values = [searched_word.to_s()]
     continent = SqlRunner.run(sql, values)
-    return Continent.new(continent.first)
+    if continent.first == nil
+      return nil
+    else
+      return Continent.new(continent.first)
+    end
   end
 
 end

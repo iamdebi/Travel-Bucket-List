@@ -71,7 +71,11 @@ class Country
     sql = "SELECT * FROM countries WHERE name = $1"
     values = [searched_word.to_s()]
     country = SqlRunner.run(sql, values)
-    return Country.new(country.first)
+    if country.first == nil
+      return nil
+    else
+      return Country.new(country.first)
+    end
   end
 
 end

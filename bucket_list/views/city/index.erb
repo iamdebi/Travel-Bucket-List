@@ -1,4 +1,4 @@
-<a href="/cities/new">Add City</a>
+<a class="padding-left" href="/cities/new">Add City</a>
 <div class="city city-container">
 <% for city in @cities %>
 <div class ="city-tile">
@@ -8,7 +8,7 @@
       <div class="container-visit-cities">
         <h3>Visited?</h3>
           <% if city.visit === "t" %>
-            <div class="tick-box"><span>&#10003;</span></div>
+            <div class="tick-box tick-box--active"></div>
           <% elsif city.visit === "f"  %>
             <div class="tick-box"></div>
           <% end %>

@@ -1,6 +1,6 @@
 <% for city in @cities %>
 <div class="container-visit">
   <h1><a href="/cities/<%= city.id %>"><%= city.name %></a></h1>
-  <div class="tick-box"><span>&#10003;</span></div>
+  <div class="tick-box tick-box--active"></div>
 </div>
 <% end %>

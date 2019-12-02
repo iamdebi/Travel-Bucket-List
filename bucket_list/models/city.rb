@@ -88,7 +88,7 @@ class City
     sql = "SELECT * FROM cities WHERE name = $1"
     values = [searched_word.to_s()]
     city = SqlRunner.run(sql, values)
-    if city == []
+    if city.first == nil
       return nil
     else
       return City.new(city.first)
