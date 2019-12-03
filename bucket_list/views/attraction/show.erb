@@ -2,22 +2,25 @@
 <h3><%= @attraction.city.name %></h3>
 <h2><%=@attraction.name%> </h2>
 </div>
+
+<div class="review-buttons">
 <p><a href="/attractions/<%= @attraction.id %>/edit">Edit Atrraction</a></p>
 <form action="/attractions/<%= @attraction.id %>/delete" method="post">
   <button type="submit" name="delete">Delete Attraction</button>
-
-<div>
 </form>
 <p><a class="button" href="/reviews/new">Add Review</a></p>
-<h3>Reviews</h3>
-<% for review in @attraction.reviews  %>
-<div class="city-tile">
+</div>
 
+<h3>Reviews</h3>
+<div class="review container">
+<% for review in @attraction.reviews  %>
+<div class="review-tile">
 
 <h4>Review</h4>
 <p><%= review.title %></p>
 <p><%= review.review_word %></p>
 <p><%= review.review %></p>
-<% end %>
 </div>
+<% end %>
+
 </div>

@@ -7,7 +7,7 @@ also_reload( '../models/*' )
 
 # index
 get '/reviews' do
-
+  @reviews = Review.view_all
   erb(:"/review/index")
 end
 
@@ -28,7 +28,7 @@ end
 post '/reviews' do
   new_review = Review.new(params)
   new_review.save()
-  redirect '/reviews'
+  erb(:"/review/added")
 end
 
 # edit

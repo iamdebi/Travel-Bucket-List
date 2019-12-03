@@ -194,5 +194,27 @@ li {
 }
 
 .heading {
-    text-align: center;
+  text-align: center;
+}
+
+.review-buttons{
+  flex-direction: row;
+  display: flex;
+}
+
+.review-tile{
+  text-align: center;
+  flex: 0 0 25%;
+  width: 200px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 3px solid grey;
+  margin: 5px;
+}
+
+.review {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
