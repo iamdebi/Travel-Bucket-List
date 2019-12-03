@@ -94,13 +94,29 @@ button, .button{
   border: 2px solid black;
   border-radius: 25px;
   padding: 5px 10px 5px 10px;
+  display: inline-block;
 }
 
-.button :hover{
+button:hover, .button:hover{
   border: 2px solid grey;
   border-radius: 25px;
   padding: 5px 10px 5px 10px;
   background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.search{
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  display: inline-block;
+}
+
+select.button:hover
+,input.button:hover {
+  border: 2px solid black;
+  background: none;
+  cursor: default;
 }
 
 .edit-button{
