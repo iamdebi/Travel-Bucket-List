@@ -1,16 +1,23 @@
+<div class ="heading">
 <h3><%= @attraction.city.name %></h3>
 <h2><%=@attraction.name%> </h2>
+</div>
 <p><a href="/attractions/<%= @attraction.id %>/edit">Edit Atrraction</a></p>
 <form action="/attractions/<%= @attraction.id %>/delete" method="post">
   <button type="submit" name="delete">Delete Attraction</button>
 
+<div>
 </form>
 <p><a class="button" href="/reviews/new">Add Review</a></p>
 <h3>Reviews</h3>
 <% for review in @attraction.reviews  %>
+<div class="city-tile">
+
+
 <h4>Review</h4>
 <p><%= review.title %></p>
 <p><%= review.review_word %></p>
 <p><%= review.review %></p>
-<hr/>
 <% end %>
+</div>
+</div>

@@ -192,3 +192,7 @@ li {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.heading {
+    text-align: center;
+}

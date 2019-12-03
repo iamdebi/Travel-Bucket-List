@@ -16,5 +16,6 @@ end
 
 post '/search' do
   @search = Search.search(params['search'])
+  @class_type = Search.class_type(@search.class)
   erb( :search )
 end
