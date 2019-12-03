@@ -1,9 +1,9 @@
 <form action="/cities" method="POST">
   <label for="name">Name:</label>
-  <input required type="text" name="name">
+  <input class="button" required type="text" name="name">
 
   <label>Select the country:</label>
-    <select name="country_id" id="country-id">
+    <select class="button" name="country_id" id="country-id">
         <option selected disabled value="">Please select a country</option>
       <% for country in @country %>
         <option required value="<%= country.id %>"><%= country.name %></option>
@@ -12,10 +12,10 @@
 
     <label>Have you visited</label>
     <label>Yes</label>
-      <input type="radio" name="visit" value="true">
+      <input class="tick-box" type="radio" name="visit" value="true">
       <label>Not yet</label>
-      <input type="radio" name="visit" value="false">
+      <input class="tick-box" type="radio" name="visit" value="false">
 
 
-  <button type="submit" value="Add City">Add Country</button>
+  <button class="button" type="submit" value="Add City">Add Country</button>
 </form>

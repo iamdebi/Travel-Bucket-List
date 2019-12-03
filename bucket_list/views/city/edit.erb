@@ -1,9 +1,9 @@
 <form action="/cities/<%= @city.id %>" method="POST">
   <label for="name">Name:</label>
-  <input required type="text" name="name" value="<%=@city.name%>">
+  <input class="button" required type="text" name="name" value="<%=@city.name%>">
 
   <label>Select the country:</label>
-    <select required name="country_id" id="country-id">
+    <select class="button" required name="country_id" id="country-id">
       <% for country in @countries %>
         <option <%= "selected" if @city.country == country %> value="<%= country.id %>"><%= country.name %></option>
       <% end %>
@@ -11,10 +11,10 @@
 
     <label>Have you visited</label>
     <label>Yes</label>
-      <input <% if @city.visit == 't' %> checked = "checked" <% end %> type="radio" name="visit" value="true">
+      <input <% if @city.visit == 't' %> checked = "checked" <% end %> type="radio" name="visit" value="true" class="tick-box button">
 
       <label>Not yet</label>
-      <input <% if @city.visit == 'f' %> checked = "checked" <% end %> type="radio" name="visit" value="false">
+      <input <% if @city.visit == 'f' %> checked = "checked" <% end %> type="radio" name="visit" value="false" class="tick-box button">
 
-  <button type="submit" value="Update City">Update City</button>
+  <button class="button" type="submit" value="Update City">Update City</button>
 </form>

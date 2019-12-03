@@ -166,9 +166,10 @@ city9 = City.new({
 
 city10 = City.new({
   'name' => 'Johannesburg',
-  'country_id' => country3,
-  'visit' => false
+  'country_id' => country4.id,
+  'visit' => true
   })
+  city10.save()
 
   #  Atrractions
 attraction1 = Attraction.new({
@@ -178,7 +179,7 @@ attraction1 = Attraction.new({
   attraction1.save()
 
 attraction2 = Attraction.new({
-  'name' => "statue of liberty",
+  'name' => "Statue of Liberty",
   'city_id' => city6.id
   })
   attraction2.save()
@@ -190,38 +191,38 @@ attraction3 = Attraction.new({
   attraction3.save()
 
 attraction4 = Attraction.new({
-  'name' => "empire state building",
+  'name' => "Empire State Building",
   'city_id' => city6.id
   })
   attraction4.save()
 
 attraction5 = Attraction.new({
-  'name' => "time square",
+  'name' => "Times Square",
   'city_id' => city6.id
   })
   attraction5.save()
 
 attraction6 = Attraction.new({
-  'name' => "sydney oprear house",
+  'name' => "sydney opera house",
   'city_id' => city5.id
   })
   attraction6.save()
 
 
 attraction7 = Attraction.new({
-  'name' => "check point charlie",
+  'name' => "Check Point Charlie",
   'city_id' => city1.id
   })
   attraction7.save()
 
 attraction8 = Attraction.new({
-  'name' => "ouvre",
+  'name' => "Louvre",
   'city_id' => city2.id
   })
   attraction8.save()
 
 attraction9 = Attraction.new({
-  'name' => "Christ the Redeemer",
+  'name' => "Christ The Redeemer",
   'city_id' => city4.id
   })
   attraction9.save()

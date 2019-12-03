@@ -1,9 +1,9 @@
 <form action="/attractions" method="POST">
   <label for="name">Name:</label>
-  <input required type="text" name="name">
+  <input class="button" required type="text" name="name">
 
   <label> Select the city: </label>
-    <select name="city_id">
+    <select class="button" name="city_id">
       <option select disabled value="">Please select a city</option>
       <% for city in @cities %>
       <option required value="<%= city.id %>"> <%= city.name %> </option>
@@ -11,5 +11,5 @@
     </select>
 
 
-    <button type="submit" value="Add Attraction">Add Attraction</button>
+    <button class="button" type="submit" value="Add Attraction">Add Attraction</button>
 </form>
