@@ -1,8 +1,11 @@
 <a href="/attractions/new">Add Attractions</a>
 
-<% for attraction in @attractions %>
+<div class="container">
 
+<% for attraction in @attractions %>
+<div class="attraction-tile">
 <h3><a href="/attractions/<%= attraction.id %>"><%= attraction.name %></a></h3>
 <p>Average review is <%= attraction.avg_out_5 %> out of 5</p>
-<hr/>
+</div>
 <% end %>
+</div>

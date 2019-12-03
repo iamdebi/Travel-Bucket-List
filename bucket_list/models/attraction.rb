@@ -73,9 +73,13 @@ class Attraction
   def avg_review_rating
     review_total = 0
     reviews = self.reviews
-    for review in reviews
-      review_total += review.review_rating
-    end
+    # if reviews != 0
+      for review in reviews
+        review_total += review.review_rating
+      end
+    # else
+    #   return reviews = 1
+    # end
     average = review_total/reviews.size()
     return average
   end
