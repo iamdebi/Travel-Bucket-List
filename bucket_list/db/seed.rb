@@ -215,7 +215,7 @@ attraction7 = Attraction.new({
   attraction7.save()
 
 attraction8 = Attraction.new({
-  'name' => "louver",
+  'name' => "ouvre",
   'city_id' => city2.id
   })
   attraction8.save()
