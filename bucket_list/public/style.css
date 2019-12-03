@@ -78,7 +78,6 @@ li {
 
 .continent-title{
   text-align: center;
-  font-family: 'Indie Flower', cursive;
   font-size: 30px;
 }
 
@@ -141,23 +140,45 @@ li {
   padding: 20px;
   border: 3px solid grey;
   margin: 5px;
-
 }
 
 .city-title{
+  flex: 0 0 25%;
+  flex-wrap: wrap;
   text-align: center;
-  font-family: 'Indie Flower', cursive;
   font-size: 30px;
   display: flex;
-
 }
 
 .city{
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  margin: 15px;
 }
 
 .padding-left{
   padding-left: 10px;
+}
+
+.country{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.country-tile{
+  text-align: center;
+  flex: 0 0 25%;
+  width: 200px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 3px solid grey;
+  margin: 5px;
+}
+
+.country-title{
+  text-align: center;
+  font-size: 30px;
 }

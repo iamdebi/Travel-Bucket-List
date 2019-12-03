@@ -1,24 +1,18 @@
 <div>
-  <h2>Countries</h2>
+  <h1>Countries</h1>
   <a class="button" href="/countries/new">add country</a>
 </div>
 
+<div class="country container">
+  <% for country in @countries %>
+  <div class="country-tile">
+    <h1><a href="/countries/<%= country.id %>"><%= country.name %></a></h1>
+      <div class ="country-title">
+        <% for city in country.view_cities%>
+          <p><%= city.name %></p>
 
-<table>
-  <tr>
-    <th>Country</th>
-    <th>Cities</th>
-  </tr>
-  <tr>
-    <% for country in @countries %>
-    <td><a href="/countries/<%= country.id %>"><%= country.name %></a></td>
-    <td>
-      <% for city in country.view_cities%>
-      <ul>
-        <li><%= city.name %></li>
-      </ul>
-      <% end %>
-    </td>
-  </tr>
+        <% end %>
+      </div>
+  </div>
   <% end %>
-</table>
+</div>

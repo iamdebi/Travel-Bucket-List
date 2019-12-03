@@ -49,6 +49,12 @@ continent6 = Continent.new({
   })
 continent6.save()
 
+continent7 = Continent.new({
+  'name' => 'Antarctica',
+  'img' => '/images/continents/Antarctica.png'
+  })
+continent7.save()
+
 # Countries
 
 country1 = Country.new({
@@ -157,6 +163,12 @@ city9 = City.new({
   'visit' => true
   })
   city9.save()
+
+city10 = City.new({
+  'name' => 'Johannesburg',
+  'country_id' => country3,
+  'visit' => false
+  })
 
   #  Atrractions
 attraction1 = Attraction.new({
