@@ -2,7 +2,7 @@
 
 <ul>
   <% for city in @country.view_cities %>
-  <li> <%=city.name%> </li>
+  <li><a href="/cities/<%= city.id %>"> <%=city.name%> </a></li>
   <% end %>
 </ul>
 
