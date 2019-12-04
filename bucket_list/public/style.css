@@ -2,10 +2,6 @@ body{
   font-family: 'Indie Flower', cursive;
 }
 
-nav {
-  display: flex;
-  width: 100%;
-}
 
 h1 {
   font-family: 'Amatic SC', cursive;
@@ -21,10 +17,11 @@ button{
   padding-left: 10px;
   font-size: 20px;
   padding-right: 0;
+  flex-wrap
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
