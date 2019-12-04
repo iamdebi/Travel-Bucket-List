@@ -166,7 +166,7 @@ city9 = City.new({
 
 city10 = City.new({
   'name' => 'Johannesburg',
-  'country_id' => country4.id,
+  'country_id' => country3.id,
   'visit' => true
   })
   city10.save()

@@ -3,7 +3,7 @@
 }
 
 .main-header{
-  font-size: 170%;
+  font-size: 200%;
 }
 
 .search-container{
@@ -103,6 +103,7 @@ button, .button{
   border-radius: 25px;
   padding: 5px 10px 5px 10px;
   display: inline-block;
+  font-size: inherit;
 }
 
 button:hover, .button:hover{
