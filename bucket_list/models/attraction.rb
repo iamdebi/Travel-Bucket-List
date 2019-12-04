@@ -78,7 +78,7 @@ class Attraction
         review_total += review.review_rating
       end
     else
-      return reviews = 4
+      return reviews = 0
     end
     average = review_total/reviews.size()
     return average
