@@ -223,6 +223,7 @@ select.button:hover
 .review-buttons{
   flex-direction: row;
   display: flex;
+  justify-content: space-around;
 }
 
 .review-tile{
