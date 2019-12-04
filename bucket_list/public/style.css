@@ -1,3 +1,15 @@
+* {
+  font-size: 130%;
+}
+
+.main-header{
+  font-size: 170%;
+}
+
+.search-container{
+  font-size: 30px:
+}
+
 body{
   font-family: 'Indie Flower', cursive;
 }
@@ -31,7 +43,7 @@ ul {
 li {
   padding-left: -10px;
   padding-right: 30px;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .container{
@@ -43,14 +55,14 @@ li {
 .home_header {
   background-image: url('./images/mountian_lake_landscape.jpg');
   background-repeat: no-repeat;
-  width: 80vw;
+  width: 50vw;
   height: 400px;
   justify-content: center;
 }
 
 .ybl_header{
   color: #ffffff;
-  font-size: 50px;
+  /* font-size: 50px; */
   text-align: center;
   border-color: #000000;
 }
@@ -83,7 +95,7 @@ li {
 
 .continent-title{
   text-align: center;
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 
 button, .button{
@@ -106,6 +118,7 @@ button:hover, .button:hover{
   border-radius: 25px;
   padding: 5px 10px 5px 10px;
   display: inline-block;
+  font-size: 20px;
 }
 
 select.button:hover
@@ -138,7 +151,7 @@ select.button:hover
   left: 9%;
   right: 0;
   color: red;
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 
 .container-visit{
@@ -161,8 +174,12 @@ select.button:hover
   padding: 20px;
   border: 3px solid grey;
   margin: 2%;
-  font-size: 20px;
+  /* font-size: 20px; */
   justify-content: center;
+}
+
+.city-title{
+  font-size: 20px;
 }
 
 .city{
@@ -196,7 +213,7 @@ select.button:hover
 
 .country-title{
   text-align: center;
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 
 .attraction-tile{
