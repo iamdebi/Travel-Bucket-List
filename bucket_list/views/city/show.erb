@@ -12,6 +12,6 @@
 
 <ul>
   <% for attraction in @city.view_attractions() %>
-  <li> <%=attraction.name%> </li>
+  <li><a href="/attractions/<%= attraction.id %>"> <%=attraction.name%> </a></li>
   <% end %>
 </ul>
