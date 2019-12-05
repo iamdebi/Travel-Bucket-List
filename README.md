@@ -25,7 +25,9 @@ in terminal
 - createdb bucket_list
 - psql -d bucket_list -f bucket db/bucket_list.sql
 - ruby db/seeds.rb
+
 ensure ruby gem sinatra is installed
+in terminal 
 - ruby controller.rb
 in chrome go to url http://localhost:4567/
 
