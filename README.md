@@ -27,8 +27,11 @@ in terminal
 - ruby db/seeds.rb
 
 ensure ruby gem sinatra is installed
+
 in terminal 
 - ruby controller.rb
+
+
 in chrome go to url http://localhost:4567/
 
 
